@@ -90,16 +90,16 @@ function useSetStateDemo() {
     </div>
   )
 }
+```
 
-/*
-Code này sẽ chạy khi component unMount tương đương componentDidMount trong class
+Code này sẽ chạy khi component unMount tương đương componentDidMount trong class \
+```
 ----- Code nguyên bản -----
 React.useEffect(() => {
   return () => {
     //Execute when component is Unmounted
   }
 }, [])
-*/
 ```
 
 ============ useUnmount ======== \
