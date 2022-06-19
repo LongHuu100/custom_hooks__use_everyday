@@ -1,16 +1,17 @@
 # custom_hooks__use_everyday
 Một vài custom của hook react mà developer sử dụng mỗi ngày
 
-/*
 Code sẽ chạy khi component được mount lần đầu tiên, tương đương với componentDidMound của class.
+```
 --- Code nguyên bản -----
 useEffect(() => {
   // fetch request...
 }, [])
-*/
+```
 
 /* Code mới */
 
+```
 const useMount = (callback) => {
   React.useEffect(callback, [])
 }
@@ -99,9 +100,10 @@ React.useEffect(() => {
   }
 }, [])
 */
+```
 
 ============ useUnmount ======== \
-
+```
 const useUnmount = (callback) => {
   const callbackRef = React.useRef(callback)
   callbackRef.current = callback
@@ -136,13 +138,14 @@ const UseUnmountedDemo = () => {
     </div>
   )
 }
-
+```
 
 ============ useUpdateEffect ======== \
 /* 
 Đôi khi chúng ta muốn code chỉ chạy khi state thay đổi mà không cần code chạy cho lần đầu tiên component được mount
 thì chúng ta sử dụng cách code này để giải quyết vấn đề
 
+```
 ----- Code nguyên bản ----
 function UseUpdateEffectDemo() {
   const [count, setCount] = React.useState(0)
@@ -156,8 +159,9 @@ function UseUpdateEffectDemo() {
     </div>
   )
 }
-*/
+```
 
+``
 const useUpdateEffect = function (effectCallback, deps = [])  {
   const isFirstMount = React.useRef(false)
   
@@ -191,6 +195,5 @@ function UseUpdateEffectDemo() {
     </div>
   )
 }
-
-
+```
 
