@@ -1,4 +1,7 @@
 /* 
+Đôi khi chúng ta muốn code chỉ chạy khi state thay đổi mà không cần code chạy cho lần đầu tiên component được mount
+thì chúng ta sử dụng cách code này để giải quyết vấn đề
+
 ----- Code nguyên bản ----
 function UseUpdateEffectDemo() {
   const [count, setCount] = React.useState(0)
