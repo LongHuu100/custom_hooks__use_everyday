@@ -161,7 +161,7 @@ function UseUpdateEffectDemo() {
 }
 ```
 
-``
+```
 const useUpdateEffect = function (effectCallback, deps = [])  {
   const isFirstMount = React.useRef(false)
   
