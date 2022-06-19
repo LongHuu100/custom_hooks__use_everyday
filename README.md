@@ -31,7 +31,8 @@ const UseMountDemo = () => {
   )
 }
 
-============ useSetState ======== \
+============ useSetState ======== 
+
 /* 
 ---- Code nguyên bản ----
 const [ person, setPerson ] = React.useState({
@@ -92,7 +93,7 @@ function useSetStateDemo() {
 }
 ```
 
-Code này sẽ chạy khi component unMount tương đương componentDidMount trong class \
+Code này sẽ chạy khi component unMount tương đương componentDidMount trong class
 ```
 ----- Code nguyên bản -----
 React.useEffect(() => {
@@ -102,7 +103,7 @@ React.useEffect(() => {
 }, [])
 ```
 
-============ useUnmount ======== \
+============ useUnmount ========
 ```
 const useUnmount = (callback) => {
   const callbackRef = React.useRef(callback)
@@ -140,8 +141,7 @@ const UseUnmountedDemo = () => {
 }
 ```
 
-============ useUpdateEffect ======== \
-/* 
+============ useUpdateEffect ========
 Đôi khi chúng ta muốn code chỉ chạy khi state thay đổi mà không cần code chạy cho lần đầu tiên component được mount
 thì chúng ta sử dụng cách code này để giải quyết vấn đề
 
